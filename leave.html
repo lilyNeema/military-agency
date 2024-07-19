@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>E-MILITARY</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/icon.png" rel="icon">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 5% auto; /* Added margin-top to center and provide space */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px; /* Increased margin bottom for spacing */
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .form-group input,
+        .form-group select {
+            width: calc(100% - 16px); /* Adjusted width to account for padding */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #004d00;
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #004d00;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #003300;
+        }
+        h2 {
+            color: #004d00;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="leave.html">Apply for Leave</a>
+        <a href="services.html">About Us</a>
+        <a href="login.html" style="float: right;">ADMIN</a>
+    </nav>
+  
+    <div class="form-container">
+        <h2>Apply for Leave</h2>
+        <form id="leaveForm" method="POST" action="process_leave.php">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="officerId">Service Number</label>
+                <input type="text" id="officerId" name="officerId" required>
+            </div>
+            <div class="form-group">
+                <label for="leaveStart">Leave Start Date</label>
+                <input type="date" id="leaveStart" name="leaveStart" required>
+            </div>
+            <div class="form-group">
+                <label for="leaveEnd">Leave End Date</label>
+                <input type="date" id="leaveEnd" name="leaveEnd" required>
+            </div>
+            <button type="button" class="submit-btn" onclick="submitLeaveApplication()">Submit Leave Application</button>
+        </form>
+    </div>
+
+    <script>
+        function submitLeaveApplication() {
+            // Simulate form submission
+            var formData = new FormData(document.getElementById('leaveForm'));
+
+            // Perform AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'process_leave.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    // Clear form fields if needed
+                    document.getElementById('fullName').value = '';
+                    document.getElementById('officerId').value = '';
+                    document.getElementById('leaveStart').value = '';
+                    document.getElementById('leaveEnd').value = '';
+
+                    // Show success message
+                    alert('Leave application submitted successfully.');
+
+                    // Optionally, update the Officers on Leave table on the dashboard page
+                    fetchOfficersOnLeave();
+                } else {
+                    alert('Error submitting leave application. Please try again.');
+                }
+            };
+            xhr.onerror = function() {
+                alert('Network error. Please try again later.');
+            };
+            xhr.send(formData);
+        }
+
+        function fetchOfficersOnLeave() {
+            // Example function to update the Officers on Leave table via AJAX
+            // Implement this function to fetch data and update the dashboard dynamically
+            // This function should handle updating the dashboard without page refresh
+            // You would typically fetch data from your database and update the DOM elements accordingly
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Report</title>
+</head>
+<body>
+    <form action="generate_report.php" method="post">
+        <label for="reportType">Select Report Type:</label>
+        <select name="reportType" id="reportType">
+            <option value="all_officers">All Officers</option>
+            <option value="officers_on_leave">Officers on Leave</option>
+            <option value="officers_on_duty">Officers on Duty</option>
+            <option value="new_recruits">New Recruits</option>
+        </select>
+        <button type="submit">Generate Report</button>
+    </form>
+</body>
+</html>

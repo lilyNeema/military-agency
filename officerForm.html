@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Officer Recording Form</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/icon.png" rel="icon">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid #004d00; /* Deep green border */
+        }
+        h2 {
+            color: #004d00; /* Deep green text color */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #004d00; /* Deep green focus color */
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #004d00; /* Deep green button color */
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #003300; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+<!-- navigation bar-->
+<nav class="topnav">
+    <a class="active " href="index.html">Home</a>
+    <a href="allot.html">Number Allotment</a>
+    <a href="leave.html">Apply for Leave</a>
+    <a href="services.html">About Us</a>
+    <a href="contact.html" style="float: right;">Profile</a>
+</nav>
+
+    <div class="form-container" style="margin-top: 7%;">
+        <h2>New Officer Recording Form</h2>
+        <form id="officerForm" method="POST" action="process_form.php">
+            <div class="form-group">
+                <label for="officerId">Officer ID (Auto-generated)</label>
+                <input type="text" id="officerId" name="officerId" readonly>
+            </div>
+            <div class="form-group">
+                <label for="officerName">Officer Name</label>
+                <input type="text" id="officerName" name="officerName" required>
+            </div>
+            <div class="form-group">
+                <label for="officerRank">Officer Rank</label>
+                <select id="officerRank" name="officerRank" required>
+                    <option value="">Select Rank</option>
+                    <option value="Private">Private</option>
+                    <option value="Lieutenant">Lieutenant</option>
+                    <!-- Add more ranks as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="officerCategory">Officer Category</label>
+                <select id="officerCategory" name="officerCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="Army">Army</option>
+                    <option value="Airforce">Airforce</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Commissioned">Commissioned</option>
+                    <option value="Non-Commissioned">Non-Commissioned</option>
+                </select>
+            </div>
+            <!-- Add more fields as needed for recruitment -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and ID generation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate a random Officer ID
+            document.getElementById('officerId').value = 'OFC' + Math.floor(Math.random() * 1000000);
+        });
+    </script>
+
+</body>
+</html>

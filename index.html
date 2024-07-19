@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>E-MILITARY</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<!-- styling for the slideshow-->
+<style>
+.slideshow-container {
+  position: absolute;hsg
+}
+.dot {
+  width: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(25, 58, 28);
+  border-radius: 50%;
+  display: inline-block;
+}
+.activee {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+img{
+  border-radius: 30px 30px 200px 200px;,ccl.m nug, kjbg,wqa
+}
+.mySlides img{
+width: 168%;
+}
+</style>
+<body>
+
+<!-- navigation bar-->
+    <nav class="topnav">
+         <a class="active " href="index.html">Home</a>
+         <a href="leave.html">Apply for Leave</a>
+         <a href="services.html">About Us</a>
+         <a href="login.html" style="float: right;">ADMIN</a>
+   </nav>
+
+<!-- slideshow -->
+   <div class="container con">
+        <h2>Hello, Welcome to E-MILITARY MANAGEMENT SYSTEM.</h2>
+   <div class="slideshow-container">
+
+<div class="mySlides fade">
+    <img src="assets/img/portfolio/portfolio-2.jpg" style="width: 300%;">
+</div>
+
+<div class="mySlides fade">
+    <img src="assets/img/portfolio/portfolio-7.jpg" style="width: 346%;">
+</div>
+
+<div class="mySlides fade">
+    <img src="assets/img/portfolio/portfolio-3.jpg" style="width: 300%;">
+</div>
+
+   </div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+ 
+</div>
+
+<!--javascript code for slideshow -->
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");//defining
+  var dots = document.getElementsByClassName("dot");//defining
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" activee", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " activee";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+  </div>  
+
+<!-- service section -->
+    <section class="services">
+        <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="leave.html"><b>Apply for leave</b></a></h4>
+              <p><i>Click here to apply for leave.</i></p>
+            </div>
+        
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="services.html"><b>About Us</b></a></h4>
+              <p><i>.</i></p>
+            </div>
+
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="contact.html">
+                <b>Admin Dashboard</b></a></h4>
+              <p><i>ADMIN LOGIN.</i></p>
+            </div>
+        </section>
+        
+<footer style="background-color: rgb(25, 58, 28); text-align: center; margin-top: 4%;">
+</body>
+</html>
+

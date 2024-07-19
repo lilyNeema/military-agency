@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>E-MILITARY</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- styling for video slideshow -->
+<style>
+.mySlides {
+  display: none;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.9s ease;
+}
+.activee {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 20.s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .09} 
+  to {opacity: 1}
+}
+</style>
+</head>
+<body style="background-color: rgb(76, 109, 76);">
+ <!-- navigation bar-->
+ <nav class="topnav">
+  <a class="active " href="index.html">Home</a>
+  <a href="leave.html">Apply for Leave</a>
+  <a href="services.html">About Us</a>
+  <a href="login.html" style="float: right;">ADMIN</a>
+</nav>
+   <!-- video slideshow -->
+  <section class="service-details">
+   <div class="container"> 
+   <div class="slideshow-container" style="margin-left: 13%;">
+     <div class="mySlides fade"><center>
+     <video autoplay controls muted><source src="assets/video/video-1.mp4" type="video/mp4"></video>
+     </div></center>
+     <div class="mySlides fade">
+     <center><video autoplay controls muted><source src="assets/video/video-2.mp4" type="video/mp4"></video></center>
+     </div>
+     <div class="mySlides fade">
+     <center><video autoplay controls muted><source src="assets/video/video-3.mp4" type="video/mp4"></video>
+     </div></center>
+
+
+<!-- javascript code for the slideshow -->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" activee", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " activee";
+  setTimeout(showSlides, 20000);
+}
+</script>
+
+</body>
+</html>
