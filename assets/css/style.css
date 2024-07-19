@@ -1,0 +1,204 @@
+
+
+.topnav {
+    background-color: #004d00;
+    overflow: hidden;
+    color: white;
+}
+.topnav a.active, .topnav a:hover {
+    background-color: #003300;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  margin: 15px 15px 15px 15px;
+  font-family: monospace;
+  font-size: 13px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+marquee img{
+  width: 20%;
+  height: 20%;
+  border-radius: 25px 25px 25px 25px;
+  margin-left: 10pz;
+}
+.team img{
+  width: 20px;
+  height: 20%;
+}
+.container h3{
+  font-family: monospace;
+  text-decoration: overline;
+  font-size: 25px;
+}
+.container h2{
+  text-decoration: overline;
+  box-shadow: 0 5px 5px green;
+  color: srgb(25, 58, 28);
+  text-align: center;
+}
+body {
+  font-family: helvetica;
+  background: var(--bg);
+}
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+.row{
+  display: flex;
+  box-sizing: border-box;
+}
+.row .card-img{
+  width: 70%;
+}
+.con h2{
+  text-decoration: overline;
+  color: rgb(25, 58, 28);
+  box-shadow: 0px 0px 5px 5px;
+  text-align: center;
+}
+.mySlides img{
+  width: 130%;
+}
+.mySlides video{
+   margin-left: 20%;
+  margin-top: 3%;
+  border-radius: 25px 25px 25px 25px;
+}
+.services {
+  padding-bottom: 20px;
+  width: 50%;
+  margin-left: 25%;
+}
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 40px 0;
+  background: #fff;
+  box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid #fff;
+   opacity: 0.6;
+}
+.services .icon-box:hover {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+.services .icon {
+  margin: 0 auto 20px auto;
+  padding-top: 17px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+}
+.services .icon i {
+  font-size: 36px;
+  line-height: 1;
+}
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #111;
+}
+.services .title a {
+  color: #111;
+}
+.services .icon-box-cyan .icon {
+  background: #e6fdfc;
+}
+.services .icon-box-cyan .icon i {
+  color: green;
+}
+.services .icon-box-cyan:hover {
+  border-color: green;
+}
+.services .icon-box-green .icon {
+  background: #eafde7;
+}
+.services .icon-box-green .icon i {
+  color: #41cf2e;
+}
+.services .icon-box-green:hover {
+  border-color: #41cf2e;
+}
+.services .icon-box-blue .icon {
+  background: rgb(25, 58, 28);
+}
+.services .icon-box-blue .icon i {
+  color: green;
+}
+.services .icon-box-blue:hover {
+  border-color: green;
+}
+.facts .counters span {
+  font-size: 48px;
+  display: block;
+  color: green;
+}
+.facts .counters p {
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+
+.service-details {
+  padding-bottom: 10px;
+}
+.contact {
+  padding-bottom: 30px;
+}
+#form{
+  width: 70%;
+}
+.contact .info-box {
+  color: #444;
+  text-align: center;
+  box-shadow: 0px 5px 5px rgb(25, 58, 28);
+  margin-bottom: 30px;
+  width: 50%;
+  height: 250px;
+
+}
+.contact .info-box i {
+  font-size: 32px;
+  color: green;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted green;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #666;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.map {
+  padding: 0;
+  margin-bottom: -6px;
+}
+.map iframe {
+  width: 100%;
+  height: 380px;
+}
